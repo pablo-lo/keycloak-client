@@ -786,3 +786,16 @@ type CPRAttachementRepresentation struct {
 	ContentType *string `json:"contentType,omitempty"`
 	Content     *string `json:"content,omitempty"`
 }
+
+// CPRSMSRepresentation struct
+type CPRSMSRepresentation struct {
+	MSISDN  *string                      `json:"msisdn,omitempty"`
+	Theming *CPRSMSThemingRepresentation `json:"theming,omitempty"`
+}
+
+// CPRSMSThemingRepresentation struct
+type CPRSMSThemingRepresentation struct {
+	MessageKey        *string   `json:"messageKey,omitempty"`
+	MessageParameters *[]string `json:"messageParameters,omitempty"`
+	Locale            *string   `json:"locale,omitempty"`
+}
